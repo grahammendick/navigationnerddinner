@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="NerdDinner.Views.Shared.Site" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title></title>
+  	<meta content="Nerd, Dinner, Geek, Luncheon, Dweeb, Breakfast, Technology, Bar, Beer, Wonk" name="keywords" /> 
+	<meta name="description" content="Host and promote your own Nerd Dinner free!" /> 
+    <script src="/Scripts/jquery-1.2.6.min.js" type="text/javascript"></script>    
+</head>
+<body>
+    <form id="form1" runat="server">
+		<asp:ScriptManager ID="ScriptManager" runat="server" EnablePageMethods="true"/>
+		<div class="page">
+			<div id="header">
+				<div id="title">
+					<h1>NerdDinner</h1>
+				</div>
+				<div id="logindisplay">
+					<asp:LoginName runat="server" FormatString="Welcome &lt;b&gt;{0}&lt;/b&gt;!" />
+					[ <asp:LoginStatus ID="LoginStatus" runat="server" LoginText="Log On" LogoutText="Log Off" /> ]
+				</div> 
+				<div id="menucontainer">
+					<ul id="menu">      
+					   <li><asp:HyperLink ID="FindDinnerLink" runat="server" Text="Find Dinner" /></li>
+					   <li><asp:HyperLink ID="HostDinnerLink" runat="server" Text="Host Dinner" /></li>
+					   <li><asp:HyperLink ID="AboutLink" runat="server" Text="About" /></li>   
+					</ul>
+				</div>
+			</div>
+			<div id="main">
+				<asp:ContentPlaceHolder ID="MainContent" runat="server" />
+			</div>
+		</div>
+    </form>
+</body>
+</html>

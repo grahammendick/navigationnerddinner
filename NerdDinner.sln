@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NerdDinner", "NerdDinner\NerdDinner.csproj", "{F69DAB2E-FB3E-4A64-A0A8-33935F6D0478}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NerdDinner.Tests", "NerdDinner.Tests\NerdDinner.Tests.csproj", "{67A70559-5105-45A9-8B8F-FB88A6337376}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{68308740-6C02-43FA-8CC8-CAD23DA51DE3}"
+	ProjectSection(SolutionItems) = preProject
+		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F69DAB2E-FB3E-4A64-A0A8-33935F6D0478}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F69DAB2E-FB3E-4A64-A0A8-33935F6D0478}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F69DAB2E-FB3E-4A64-A0A8-33935F6D0478}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F69DAB2E-FB3E-4A64-A0A8-33935F6D0478}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67A70559-5105-45A9-8B8F-FB88A6337376}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67A70559-5105-45A9-8B8F-FB88A6337376}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67A70559-5105-45A9-8B8F-FB88A6337376}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67A70559-5105-45A9-8B8F-FB88A6337376}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
