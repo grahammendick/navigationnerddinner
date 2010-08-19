@@ -1,0 +1,2 @@
+﻿<asp:ValidationSummary runat="server" CssClass="validation-summary-errors"/>
+<asp:Image runat="server" SkinID="Nerd" ImageUrl="nerd.jpg"/>
