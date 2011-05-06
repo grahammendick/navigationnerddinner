@@ -41,34 +41,6 @@ namespace NerdDinner.Controllers
 				return !Thread.CurrentPrincipal.Identity.IsAuthenticated;
 			}
 		}
-		public string DetailsLink 
-		{
-			get
-			{
-				return StateController.GetNavigationLink("MaintainDinner", new NavigationData() { { "id", Dinner.DinnerID } });
-			}
-		}
-		public string EditLink
-		{
-			get
-			{
-				return StateController.GetNavigationLink("Edit", new NavigationData() { { "id", Dinner.DinnerID } });
-			}
-		}
-		public string DeleteLink
-		{
-			get
-			{
-				return StateController.GetNavigationLink("Delete", new NavigationData() { { "id", Dinner.DinnerID } });
-			}
-		}
-		public string LoginLink
-		{
-			get
-			{
-				return StateController.GetNavigationLink("LogOn");
-			}
-		}
 
 
 		public DinnerDetailsViewModel(Dinner dinner)
@@ -86,17 +58,11 @@ namespace NerdDinner.Controllers
 			dinnerRepository = repository;
 		}
 
-		private const int pageSize = 10;
-
-		public IEnumerable<DinnerDetailsViewModel> Index(int? page)
+		public IEnumerable<Dinner> Index(int startRowIndex, int maximumRows)
 		{
-			foreach (Dinner dinner in dinnerRepository.FindUpcomingDinners().Skip((page ?? 0) * pageSize).Take(pageSize))
-				yield return new DinnerDetailsViewModel(dinner);
-		}
-
-		public Paginater PagedIndex(int? page)
-		{
-			return new Paginater(dinnerRepository.FindUpcomingDinners().Count(), page ?? 0, pageSize);
+			var q = dinnerRepository.FindUpcomingDinners();
+			StateContext.Data["totalRowCount"] = q.Count();
+			return q.Skip(startRowIndex).Take(maximumRows);
 		}
 
 		public DinnerDetailsViewModel Details(int id)
