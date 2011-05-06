@@ -173,7 +173,7 @@ namespace NerdDinner.Tests.Controllers
 			var controller = CreateDinnersController();
 
 			// Act
-			var result = controller.Index(0);
+			var result = controller.Index(0, 10);
 
 			// Assert
 			Assert.AreEqual(10, result.Count());
@@ -187,11 +187,11 @@ namespace NerdDinner.Tests.Controllers
 			var controller = CreateDinnersController();
 
 			// Act
-			var result = controller.PagedIndex(0);
+			var result = controller.Index(0, 10);
 
 			// Assert
-			Assert.AreEqual(100, result.TotalCount);
-			Assert.AreEqual(10, result.TotalPages);
+			Assert.AreEqual(100, StateContext.Data["totalRowCount"]);
+			Assert.AreEqual(10, result.Count());
 		}
 
 		[TestMethod]

@@ -10,31 +10,26 @@
 		</LayoutTemplate>
 		<ItemTemplate>
 			<li>
-				<asp:HyperLink ID="TitleLink" runat="server" NavigateUrl='<%# Eval("DetailsLink") %>'>
-					<asp:Localize ID="Title" runat="server" Text='<%# Eval("Dinner.Title") %>' Mode="Encode" />
-				</asp:HyperLink>
+				<cc1:NavigationHyperLink ID="TitleLink" runat="server" ToData='<%# new NavigationData() { { "id", Eval("DinnerID") } }%>' Action="MaintainDinner">
+					<asp:Localize ID="Title" runat="server" Text='<%# Eval("Title") %>' Mode="Encode" />
+				</cc1:NavigationHyperLink>
 				on
-				<asp:Localize ID="EventDate" runat="server" Text='<%# Eval("Dinner.EventDate","{0:d}") %>' Mode="Encode" />
+				<asp:Localize ID="EventDate" runat="server" Text='<%# Eval("EventDate","{0:d}") %>' Mode="Encode" />
 				@
-				<asp:Localize ID="EventTime" runat="server" Text='<%# Eval("Dinner.EventDate","{0:t}") %>' Mode="Encode" />
+				<asp:Localize ID="EventTime" runat="server" Text='<%# Eval("EventDate","{0:t}") %>' Mode="Encode" />
 			</li>
 		</ItemTemplate>
 	</asp:ListView>
 	<asp:ObjectDataSource ID="UpcomingDataSource" runat="server" SelectMethod="Index" TypeName="NerdDinner.Controllers.DinnersController">
 		<SelectParameters>
-			<cc1:NavigationDataParameter Name="page"/>
+			<cc1:NavigationDataParameter Name="startRowIndex"/>
+			<cc1:NavigationDataParameter Name="maximumRows"/>
 		</SelectParameters>
 	</asp:ObjectDataSource>
 	
-	<asp:FormView ID="PagerFormView" runat="server" DataSourceID="PagerDataSource">
-		<ItemTemplate>
-		<asp:HyperLink ID="PreviousPageLink" runat="server" Text="<<<" NavigateUrl='<%# Eval("PreviousPageLink") %>' Visible='<%# Eval("HasPreviousPage") %>'/>
-		<asp:HyperLink ID="NextPageLink" runat="server" Text=">>>" NavigateUrl='<%# Eval("NextPageLink") %>' Visible='<%# Eval("HasNextPage") %>'/>
-		</ItemTemplate>
-	</asp:FormView>
-	<asp:ObjectDataSource ID="PagerDataSource" runat="server" SelectMethod="PagedIndex" TypeName="NerdDinner.Controllers.DinnersController">
-		<SelectParameters>
-			<cc1:NavigationDataParameter Name="page"/>
-		</SelectParameters>
-	</asp:ObjectDataSource>
+	<cc1:Pager ID="Pager" runat="server" QueryStringField="q">
+		<Fields>
+			<asp:NextPreviousPagerField ShowFirstPageButton="false" ShowLastPageButton="false" PreviousPageText="<<<" NextPageText=">>>" />
+		</Fields>
+	</cc1:Pager>
 </asp:Content>

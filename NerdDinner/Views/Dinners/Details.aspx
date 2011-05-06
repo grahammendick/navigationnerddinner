@@ -35,12 +35,12 @@ function RSVPCompleted(message) {
 			<div id="rsvpmsg">
 				<asp:Localize ID="Registered" runat="server" Text="<p>You are registered for this event!</p>" Visible='<%# Eval("Registered")%>' />
 				<asp:HyperLink ID="RegisterLink" runat="server" Text="RSVP for this event" NavigateUrl='<%# Eval("Dinner.DinnerID","javascript:PageMethods.Register({0}, RSVPCompleted);") %>' Visible='<%# Eval("Unregistered")%>' />
-				<asp:HyperLink ID="LoginLink" runat="server" Text="Logon" NavigateUrl='<%# Eval("LoginLink")%>' Visible='<%# Eval("Unauthenticated")%>' /><asp:Localize ID="Login" runat="server" Text=" to RSVP for this event" Visible='<%# Eval("Unauthenticated")%>' />
+				<cc1:NavigationHyperLink ID="LoginLink" runat="server" Action="LogOn" Text="Logon" Visible='<%# Eval("Unauthenticated")%>' /><asp:Localize ID="Login" runat="server" Text=" to RSVP for this event" Visible='<%# Eval("Unauthenticated")%>' />
 			</div>
 			<asp:Panel ID="LinksPanel" runat="server" Visible='<%# Eval("IsHost") %>'>
-				<asp:HyperLink ID="EditLink" runat="server" Text="Edit Dinner" NavigateUrl='<%# Eval("EditLink") %>' />
+				<cc1:NavigationHyperLink ID="EditLink" runat="server" ToData='<%# new NavigationData() { { "id", Eval("Dinner.DinnerID") } }%>' Action="Edit" Text="Edit Dinner" />
 				|
-				<asp:HyperLink ID="DeleteLink" runat="server" Text="Delete Dinner" NavigateUrl='<%# Eval("DeleteLink") %>' />
+				<cc1:NavigationHyperLink ID="DeleteLink" runat="server" ToData='<%# new NavigationData() { { "id", Eval("Dinner.DinnerID") } }%>' Action="Delete" Text="Delete Dinner" />
 			</asp:Panel>
 			</div>
 			<asp:HiddenField ID="Latitude" runat="server" Value='<%# Eval("Dinner.Latitude") %>' />
