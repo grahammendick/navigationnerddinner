@@ -23,7 +23,7 @@
 	<asp:ObjectDataSource ID="UpcomingDataSource" runat="server" SelectMethod="Index" TypeName="NerdDinner.Controllers.DinnersController">
 		<SelectParameters>
 			<cc1:NavigationDataParameter Name="startRowIndex"/>
-			<cc1:NavigationDataParameter Name="maximumRows"/>
+			<cc1:NavigationDataParameter Name="maximumRows" DefaultValue="10"/>
 		</SelectParameters>
 	</asp:ObjectDataSource>
 	
