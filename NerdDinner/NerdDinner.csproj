@@ -43,7 +43,7 @@
       <HintPath>..\Microsoft.Practices.Unity.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Navigation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=bb3239226a232bfb, processorArchitecture=MSIL">
+    <Reference Include="Navigation, Version=1.1.0.0, Culture=neutral, PublicKeyToken=bb3239226a232bfb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Navigation.dll</HintPath>
     </Reference>
