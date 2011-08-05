@@ -46,7 +46,7 @@
 						RsvpMessage = "" + dinner.RSVPCount + " RSVPs";
 
 					// Add Pin to Map
-					map.loadPin(LL, '<a href="' + dinner.DetailsLink + '">'
+					map.loadPin(LL, '<a href="/Dinners/Details/' + dinner.DinnerID + '">'
 								+ dinner.Title + '</a>',
 								"<p>" + dinner.Description + "</p>" + RsvpMessage);
 
@@ -54,7 +54,7 @@
 					$('#dinnerList').append($('<li/>')
 									.attr("class", "dinnerItem")
 									.append($('<a/>')
-									.attr("href", dinner.DetailsLink)
+									.attr("href", "/Dinners/Details/" + dinner.DinnerID)
 									.html(dinner.Title)).append(" (" + RsvpMessage + ")"));
 				});
 

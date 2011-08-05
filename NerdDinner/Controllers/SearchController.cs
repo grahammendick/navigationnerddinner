@@ -41,7 +41,6 @@ namespace NerdDinner.Controllers
 								  Title = dinner.Title,
 								  Description = dinner.Description,
 								  RSVPCount = dinner.RSVPs.Count,
-								  DetailsLink = StateController.GetNavigationLink("MaintainDinner", new NavigationData() { { "id", dinner.DinnerID } }),
 							  };
 
 			return jsonDinners.ToList();
