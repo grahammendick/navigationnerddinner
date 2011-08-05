@@ -8,6 +8,8 @@ using System.Security;
 using Microsoft.Practices.Unity;
 using NerdDinner.Controllers;
 using NerdDinner.Models;
+using Navigation;
+using System.Web.Routing;
 
 namespace NerdDinner
 {
@@ -23,6 +25,7 @@ namespace NerdDinner
 				.RegisterType<RSVPController, RSVPController>()
 				.RegisterType<IDinnerRepository, DinnerRepository>();
 			Application["Container"] = unityContainer;
+			StateInfoConfig.AddStateRoutes(RouteTable.Routes);
 		}
 
 		protected void Session_Start(object sender, EventArgs e)
