@@ -78,7 +78,6 @@
     <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Controls\CreateUserWizardAdapter.cs" />
     <Compile Include="Controls\DateTimeValidator.cs" />
-    <Compile Include="Controls\FormViewAdapter.cs" />
     <Compile Include="Controls\LoginAdapter.cs" />
     <Compile Include="Controls\MapExtender.cs" />
     <Compile Include="Controls\ObjectDataSourceAdapter.cs" />

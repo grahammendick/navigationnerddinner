@@ -1,2 +1,6 @@
-﻿<asp:ValidationSummary runat="server" CssClass="validation-summary-errors"/>
-<asp:Image runat="server" SkinID="Nerd" ImageUrl="nerd.jpg"/>
+﻿<%@ Register assembly="NerdDinner" namespace="NerdDinner.Controls" tagprefix="cc2" %>
+<asp:FormView runat="server" RenderOuterTable="false"/>
+<asp:ValidationSummary runat="server" CssClass="validation-summary-errors"/>
+<asp:RequiredFieldValidator runat="server" CssClass="field-validation-error"/>
+<cc2:PhoneCountryValidator runat="server" CssClass="field-validation-error"/>
+<cc2:DateTimeValidator runat="server" CssClass="field-validation-error"/>
