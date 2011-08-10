@@ -9,7 +9,7 @@
 	    <asp:ValidationSummary ID="Validation" runat="server" HeaderText="Please correct the errors and try again." ValidationGroup="Login"/>
 		<fieldset>
 			<legend>Account Information</legend>
-    		<asp:Login ID="Login" runat="server">
+    		<asp:Login ID="Login" runat="server" RenderOuterTable="false">
 				<LayoutTemplate>
 					<span class="validation-summary-errors"><asp:Literal ID="FailureText" runat="server" EnableViewState="False"></asp:Literal></span>
 					<p>
