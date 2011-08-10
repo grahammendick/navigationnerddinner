@@ -29,7 +29,7 @@
 	
 	<cc1:Pager ID="Pager" runat="server" QueryStringField="q">
 		<Fields>
-			<asp:NextPreviousPagerField ShowFirstPageButton="false" ShowLastPageButton="false" PreviousPageText="<<<" NextPageText=">>>" />
+			<asp:NextPreviousPagerField ButtonType="Button" NextPageText="&gt;&gt;&gt;" PreviousPageText="&lt;&lt;&lt;" />
 		</Fields>
 	</cc1:Pager>
 </asp:Content>
