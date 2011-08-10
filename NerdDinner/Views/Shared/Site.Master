@@ -1,4 +1,5 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="NerdDinner.Views.Shared.Site" %>
+<%@ Register assembly="Navigation" namespace="Navigation" tagprefix="cc1" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
@@ -21,9 +22,9 @@
 				</div> 
 				<div id="menucontainer">
 					<ul id="menu">      
-					   <li><asp:HyperLink ID="FindDinnerLink" runat="server" Text="Find Dinner" /></li>
-					   <li><asp:HyperLink ID="HostDinnerLink" runat="server" Text="Host Dinner" /></li>
-					   <li><asp:HyperLink ID="AboutLink" runat="server" Text="About" /></li>   
+					   <li><cc1:NavigationHyperLink ID="FindDinnerLink" runat="server" Action="Home" Text="Find Dinner" /></li>
+					   <li><cc1:NavigationHyperLink ID="HostDinnerLink" runat="server" Action="HostDinner" Text="Host Dinner" /></li>
+					   <li><cc1:NavigationHyperLink ID="AboutLink" runat="server" Action="About" Text="About" /></li>   
 					</ul>
 				</div>
 			</div>

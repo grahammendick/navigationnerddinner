@@ -12,7 +12,6 @@ namespace NerdDinner.Views.Account
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-			RegisterLink.NavigateUrl = StateController.GetNavigationLink("Register");
 		}
 	}
 }

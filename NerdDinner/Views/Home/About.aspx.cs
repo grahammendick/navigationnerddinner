@@ -12,8 +12,6 @@ namespace NerdDinner.Views.Home
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-			FindLink.NavigateUrl = StateController.GetNavigationLink("Home");
-			CreateLink.NavigateUrl = StateController.GetNavigationLink("HostDinner");
 		}
 	}
 }
