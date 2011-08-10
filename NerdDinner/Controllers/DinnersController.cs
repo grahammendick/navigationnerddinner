@@ -58,11 +58,11 @@ namespace NerdDinner.Controllers
 			dinnerRepository = repository;
 		}
 
-		public IEnumerable<Dinner> Index(int startRowIndex, int maximumRows)
+		public List<Dinner> Index(int startRowIndex, int maximumRows)
 		{
 			var q = dinnerRepository.FindUpcomingDinners();
 			StateContext.Data["totalRowCount"] = q.Count();
-			return q.Skip(startRowIndex).Take(maximumRows);
+			return q.Skip(startRowIndex).Take(maximumRows).ToList();
 		}
 
 		public DinnerDetailsViewModel Details(int id)
