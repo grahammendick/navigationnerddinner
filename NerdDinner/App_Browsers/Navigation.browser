@@ -2,8 +2,6 @@
 	<browser refID="Default">
 		<controlAdapters>
 			<adapter controlType="System.Web.UI.Page" adapterType="Navigation.StateAdapter, Navigation" />
-			<adapter controlType="System.Web.UI.WebControls.Login" adapterType="NerdDinner.Controls.LoginAdapter, NerdDinner" />
-			<adapter controlType="System.Web.UI.WebControls.CreateUserWizard" adapterType="NerdDinner.Controls.CreateUserWizardAdapter, NerdDinner" />
 			<adapter controlType="System.Web.UI.WebControls.ObjectDataSource" adapterType="NerdDinner.Controls.ObjectDataSourceAdapter, NerdDinner" />
 		</controlAdapters>
 	</browser>

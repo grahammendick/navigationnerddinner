@@ -5,6 +5,10 @@
 		<fieldset>
 			<legend>Account Information</legend>
     		<asp:CreateUserWizard ID="CreateUser" runat="server" onnextbuttonclick="CreateUser_NextButtonClick">
+				<LayoutTemplate>
+					<asp:PlaceHolder ID="wizardStepPlaceholder" runat="server" />
+					<asp:PlaceHolder ID="navigationPlaceholder" runat="server" />
+				</LayoutTemplate>
 				<WizardSteps>
 					<asp:CreateUserWizardStep runat="server">
 						<ContentTemplate>

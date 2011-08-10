@@ -76,9 +76,7 @@
     <Compile Include="Controllers\DinnersController.cs" />
     <Compile Include="Controllers\RSVPController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
-    <Compile Include="Controls\CreateUserWizardAdapter.cs" />
     <Compile Include="Controls\DateTimeValidator.cs" />
-    <Compile Include="Controls\LoginAdapter.cs" />
     <Compile Include="Controls\MapExtender.cs" />
     <Compile Include="Controls\ObjectDataSourceAdapter.cs" />
     <Compile Include="Controls\PhoneCountryValidator.cs" />
