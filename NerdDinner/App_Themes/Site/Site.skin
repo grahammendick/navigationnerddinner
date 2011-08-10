@@ -2,6 +2,7 @@
 <asp:FormView runat="server" RenderOuterTable="false"/>
 <asp:ValidationSummary runat="server" CssClass="validation-summary-errors"/>
 <asp:RequiredFieldValidator runat="server" CssClass="field-validation-error"/>
+<asp:CompareValidator runat="server" CssClass="field-validation-error"/>
 <cc2:PhoneCountryValidator runat="server" CssClass="field-validation-error"/>
 <cc2:DateTimeValidator runat="server" CssClass="field-validation-error"/>
 <asp:Image runat="server" SkinID="Nerd" ImageUrl="nerd.jpg"/>
