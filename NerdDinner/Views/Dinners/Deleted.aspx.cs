@@ -12,7 +12,6 @@ namespace NerdDinner.Views.Dinners
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-			UpcomingLink.NavigateUrl = StateController.GetNavigationLink("Dinners");
 		}
 	}
 }

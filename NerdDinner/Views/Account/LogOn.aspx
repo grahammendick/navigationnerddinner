@@ -1,9 +1,10 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LogOn.aspx.cs" Inherits="NerdDinner.Views.Account.LogOn" MasterPageFile="~/Views/Shared/Site.Master" Theme="Site" %>
+<%@ Register assembly="Navigation" namespace="Navigation" tagprefix="cc1" %>
 <asp:Content ID="Main" ContentPlaceHolderID="MainContent" runat="server">
     <div>
 		<h2>Log On</h2>
 		<p>
-			Please enter your username and password. <asp:HyperLink ID="RegisterLink" runat="server" Text="Register"/> if you don't have an account.
+			Please enter your username and password. <cc1:NavigationHyperLink ID="RegisterLink" runat="server" Action="Register" Text="Register"/> if you don't have an account.
 		</p>
 	    <asp:ValidationSummary ID="Validation" runat="server" HeaderText="Please correct the errors and try again." ValidationGroup="Login"/>
 		<fieldset>
