@@ -15,7 +15,6 @@ namespace NerdDinner.Controllers
 		public double Longitude { get; set; }
 		public string Description { get; set; }
 		public int RSVPCount { get; set; }
-		public string DetailsLink { get; set; }
 	}
 
 	public class SearchController
