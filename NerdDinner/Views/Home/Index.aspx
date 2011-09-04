@@ -1,10 +1,11 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="NerdDinner.Views.Home.Index" MasterPageFile="~/Views/Shared/Site.Master" Theme="Site" %>
+<%@ Register assembly="Navigation" namespace="Navigation" tagprefix="cc1" %>
 <%@ Register assembly="NerdDinner" namespace="NerdDinner.Controls" tagprefix="cc2" %>
 <asp:Content ID="Main" ContentPlaceHolderID="MainContent" runat="server">
 	<h2>Find a Dinner</h2>
 	<div id="mapDivLeft">
 		<div id="searchBox">
-			Enter your location: <input type="text" id="Location" /> or <asp:HyperLink ID="UpcomingLink" runat="server" Text="View All Upcoming Dinners" />.
+			Enter your location: <input type="text" id="Location" /> or <cc1:NavigationHyperLink ID="UpcomingLink" runat="server" Action="Dinners" Text="View All Upcoming Dinners" />
 			<input id="search" type="submit" value="Search" />
 		</div>
 		<asp:Panel ID="Map" runat="server" style="width:600px;height:400px;position:relative"/>

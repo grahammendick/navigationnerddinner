@@ -19,7 +19,7 @@ namespace NerdDinner.Views.Home {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink UpcomingLink;
+        protected global::Navigation.NavigationHyperLink UpcomingLink;
         
         /// <summary>
         /// Map control.

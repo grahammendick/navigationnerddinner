@@ -13,9 +13,6 @@ namespace NerdDinner.Views.Shared
 		protected void Page_Load(object sender, EventArgs e)
 		{
 			LoginStatus.LogoutPageUrl = StateController.GetNavigationLink("Home");
-			FindDinnerLink.NavigateUrl = StateController.GetNavigationLink("Home");
-			HostDinnerLink.NavigateUrl = StateController.GetNavigationLink("HostDinner");
-			AboutLink.NavigateUrl = StateController.GetNavigationLink("About");
 		}
 	}
 }
