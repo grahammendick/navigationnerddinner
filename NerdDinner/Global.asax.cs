@@ -6,7 +6,6 @@ using System.Web.Security;
 using System.Web.SessionState;
 using System.Security;
 using Microsoft.Practices.Unity;
-using NerdDinner.Controllers;
 using NerdDinner.Models;
 using Navigation;
 using System.Web.Routing;
@@ -20,9 +19,6 @@ namespace NerdDinner
 		{
 			IUnityContainer unityContainer = new UnityContainer();
 			unityContainer
-				.RegisterType<DinnersController, DinnersController>()
-				.RegisterType<SearchController, SearchController>()
-				.RegisterType<RSVPController, RSVPController>()
 				.RegisterType<IDinnerRepository, DinnerRepository>();
 			Application["Container"] = unityContainer;
 			StateInfoConfig.AddStateRoutes(RouteTable.Routes);

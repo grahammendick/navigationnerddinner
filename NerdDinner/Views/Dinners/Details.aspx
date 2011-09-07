@@ -3,6 +3,7 @@
 <%@ Register assembly="NerdDinner" namespace="NerdDinner.Controls" tagprefix="cc2" %>
 <asp:Content ID="Main" ContentPlaceHolderID="MainContent" runat="server">
 <script type="text/javascript">
+PageMethods.set_path('/Views/Dinners/Details.aspx');
 function RSVPCompleted(message) {
 	$("#rsvpmsg").html(message);
 	$("#rsvpmsg").animate({ fontSize: "1.5em" }, 400);
